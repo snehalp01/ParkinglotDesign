@@ -7,6 +7,8 @@ public class ParkingSpot extends BaseModel{
     private static int idCounter=0;
     private int id;
     private int number;
+
+    private Vehicle vehicle;
     private VehicleType vehicleType;
     private ParkingSpotStatus parkingSpotStatus;
 
@@ -52,5 +54,13 @@ public class ParkingSpot extends BaseModel{
 
     public void setParkingSpotStatus(ParkingSpotStatus parkingSpotStatus) {
         this.parkingSpotStatus = parkingSpotStatus;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 }

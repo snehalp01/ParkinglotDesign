@@ -10,7 +10,10 @@ public class Ticket extends BaseModel{
     private ParkingSpot parkingSpot;
     private Gate entryGate;
 
+    private static int idCounter=0;
+
     public Ticket() {
+        this.id = idCounter++;
     }
 
     public Ticket(LocalDateTime entryTime, Vehicle vehicle, ParkingSpot parkingSpot, Gate entryGate) {
@@ -18,6 +21,7 @@ public class Ticket extends BaseModel{
         this.vehicle = vehicle;
         this.parkingSpot = parkingSpot;
         this.entryGate = entryGate;
+        this.id = idCounter++;
     }
 
     public LocalDateTime getEntryTime() {

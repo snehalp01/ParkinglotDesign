@@ -23,7 +23,9 @@ public class TicketRepository {
         return ticket;
     }
 
-    public void put(Ticket ticket){
+    public Ticket put(Ticket ticket){
+
         tickets.put(ticket.getId(), ticket);
+        return ticket;
     }
 }
